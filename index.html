@@ -2,30 +2,253 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>CLKN</title>
+
+  <style>
+    :root {
+      --background: #141414;
+      --panel: #232323;
+      --panel-stroke: rgba(211, 211, 211, 0.18);
+      --accent: #6E6E6E;
+      --text: #D3D3D3;
+      --text-secondary: #6E6E6E;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(100% - 48px, 1000px);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--panel-stroke);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    main {
+      padding: 100px 0 80px;
+    }
+
+    .hero {
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    section {
+      padding: 72px 0;
+      border-top: 1px solid var(--panel-stroke);
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    p {
+      max-width: 720px;
+      margin: 0 0 18px;
+    }
+
+    .panel {
+      margin-top: 32px;
+      padding: 32px;
+      background: var(--panel);
+      border: 1px solid var(--panel-stroke);
+      border-radius: 12px;
+    }
+
+    .secondary {
+      color: var(--text-secondary);
+    }
+
+    footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--panel-stroke);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 32px, 1000px);
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+
+      main {
+        padding-top: 60px;
+      }
+
+      .hero {
+        min-height: 360px;
+      }
+
+      .panel {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>CLKN</h1>
 
-  <h2>CL Panner</h2>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">CLKN</div>
 
-  <p>
-    CL Panner is an application designed for Ableton Live that lets you
-    create spatial mixes by modeling the placement of 2 to 12 speakers
-    in a scaled 3D space.
-  </p>
+        <div class="nav-links">
+          <a href="#cl-panner">CL Panner</a>
+          <a href="#support">Support</a>
+          <a href="#privacy">Privacy</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Support</h2>
+  <main class="container">
 
-  <p>
-    For support with CL Panner, contact CLKN.
-  </p>
+    <div class="hero">
+      <p class="eyebrow">CLKN Software</p>
 
-  <h2>Privacy Policy</h2>
+      <h1>CL Panner</h1>
 
-  <p>
-    Privacy information for CL Panner.
-  </p>
+      <p class="intro">
+        Spatial audio mixing for Ableton Live, based on the real
+        three-dimensional placement of your speaker system.
+      </p>
+    </div>
+
+    <section id="cl-panner">
+      <h2>CL Panner</h2>
+
+      <p>
+        CL Panner is an application designed for Ableton Live that lets you
+        create spatial mixes by modeling the placement of 2 to 12 speakers
+        in a scaled 3D space, giving you greater creative freedom in sound design.
+      </p>
+
+      <p>
+        CL Panner communicates with Live via OSC, allowing you to mix on site
+        using one computer running CL Panner and another running Live connected
+        to the playback system.
+      </p>
+
+      <div class="panel">
+        <p class="secondary">Designed for macOS</p>
+        <p>2–12 speakers · 3D spatial positioning · OSC communication</p>
+      </div>
+    </section>
+
+    <section id="support">
+      <h2>Support</h2>
+
+      <p>
+        Need help with CL Panner? Support information and contact details
+        will be available here.
+      </p>
+    </section>
+
+    <section id="privacy">
+      <h2>Privacy Policy</h2>
+
+      <p>
+        Privacy information for CL Panner will be published here.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 CLKN
+    </div>
+  </footer>
+
 </body>
 </html>
