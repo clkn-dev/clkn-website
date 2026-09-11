@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CL Panner Support — CLKN</title>
+
+  <style>
+    :root {
+      --background: #141414;
+      --panel: #232323;
+      --panel-stroke: rgba(211, 211, 211, 0.18);
+      --accent: #6E6E6E;
+      --text: #D3D3D3;
+      --text-secondary: #6E6E6E;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(100% - 48px, 1000px);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--panel-stroke);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .back {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .back:hover {
+      color: var(--text);
+    }
+
+    main {
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      max-width: 720px;
+      margin: 0 0 18px;
+    }
+
+    .panel {
+      max-width: 720px;
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--panel);
+      border: 1px solid var(--panel-stroke);
+      border-radius: 12px;
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      font-weight: 500;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--panel-stroke);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 32px, 1000px);
+      }
+
+      main {
+        padding: 64px 0;
+      }
+
+      .panel {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="brand">CLKN</a>
+        <a href="index.html" class="back">Back to CLKN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <p class="eyebrow">Support</p>
+    <h1>CL Panner</h1>
+
+    <p>
+      If you need help using CL Panner, have a question about the application,
+      or experience a technical issue, please contact CLKN Support.
+    </p>
+
+    <div class="panel">
+      <h2>Contact Support</h2>
+
+      <p>
+        When reporting a problem, please include a brief description of the
+        issue and, when relevant, your macOS version and CL Panner version.
+      </p>
+
+      <a class="email" href="mailto:support.clkn@gmail.com">
+        support.clkn@gmail.com
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 CLKN
+    </div>
+  </footer>
+
+</body>
+</html>
